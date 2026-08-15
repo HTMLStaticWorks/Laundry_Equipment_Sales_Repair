@@ -1,0 +1,790 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laundry Equipment Sales & Repair | Heavy-Duty Commercial Machinery</title>
+  <meta name="description" content="Premium commercial laundry equipment sales, installation, OEM spare parts, and 24/7 technical repair services for laundromats, hotels, hospitals, and industrial operations.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <!-- ==========================================================================
+       SITE HEADER / NAVBAR (Sticky & Responsive)
+       ========================================================================== -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <!-- Logo -->
+        <a href="index.html" class="brand-logo" id="main-logo-link">
+          <div class="brand-logo-icon">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect>
+  <line x1="4" y1="7" x2="20" y2="7"></line>
+  <circle cx="12" cy="14" r="4.5"></circle>
+  <path d="M12 11a3 3 0 0 0-3 3"></path>
+  <circle cx="7.5" cy="4.5" r="0.5" fill="currentColor"></circle>
+  <circle cx="10" cy="4.5" r="0.5" fill="currentColor"></circle>
+  <circle cx="16.5" cy="4.5" r="1.5"></circle>
+</svg>
+</div>
+          <div class="brand-logo-text">
+            INDUSTRIAL<span>LAUNDRY</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation (>1024px) -->
+        <nav class="desktop-nav" aria-label="Main Navigation">
+          <ul class="nav-links">
+            <li class="nav-dropdown-wrap">
+              <a href="index.html" class="nav-link active nav-dropdown-trigger">
+                Home <i data-lucide="chevron-down" class="dropdown-arrow"></i>
+              </a>
+              <ul class="nav-dropdown-menu">
+                <li>
+                  <a href="index.html" class="dropdown-item">
+                    <span class="dropdown-item-title">Home 1 — Showroom</span>
+                    <span class="dropdown-item-desc">Heavy-Duty Equipment Showcase</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="home2.html" class="dropdown-item">
+                    <span class="dropdown-item-title">Home 2 — Industrial Catalog</span>
+                    <span class="dropdown-item-desc">Specification Matrix & Layouts</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="services.html" class="nav-link">Services</a></li>
+            <li><a href="products.html" class="nav-link">Equipment</a></li>
+            <li><a href="comparison.html" class="nav-link">Compare</a></li>
+            <li><a href="blog.html" class="nav-link">Resources</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+          </ul>
+
+          <div class="nav-actions">
+            <!-- Theme Toggle Button -->
+            <button class="btn-icon theme-toggle-btn" title="Toggle Theme" aria-label="Toggle Theme" id="desktop-theme-toggle">
+              <i data-lucide="moon"></i>
+            </button>
+            <!-- RTL Toggle Button -->
+            <button class="btn-icon rtl-toggle-btn" title="Toggle LTR/RTL" aria-label="Toggle LTR/RTL" id="desktop-rtl-toggle">
+              <i data-lucide="arrow-left-right"></i>
+            </button>
+            <!-- Login Button -->
+            <a href="login.html" class="btn-icon" title="Login" aria-label="Login">
+              <i data-lucide="user"></i>
+            </a>
+            <!-- CTA Button -->
+            <a href="contact.html" class="btn btn-primary" id="desktop-nav-cta">
+              <i data-lucide="file-text"></i>
+              Request Quote
+            </a>
+          </div>
+        </nav>
+
+        <!-- Mobile / Tablet Hamburger Button (Strictly <=1024px) -->
+        <button class="hamburger-btn" aria-label="Open Navigation Menu" id="mobile-hamburger-trigger">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       SLIDE-OUT MOBILE DRAWER (Full height dark industrial appearance)
+       ========================================================================== -->
+  <div class="mobile-drawer-overlay" id="mobile-drawer-overlay">
+    <aside class="mobile-drawer" id="mobile-drawer">
+      <div class="drawer-header">
+        <a href="index.html" class="brand-logo" style="margin: 0; font-size: 1.15rem;">
+          <div class="brand-logo-icon" style="width: 32px; height: 32px;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect>
+              <line x1="4" y1="7" x2="20" y2="7"></line>
+              <circle cx="12" cy="14" r="4.5"></circle>
+              <path d="M12 11a3 3 0 0 0-3 3"></path>
+              <circle cx="7.5" cy="4.5" r="0.5" fill="currentColor"></circle>
+              <circle cx="10" cy="4.5" r="0.5" fill="currentColor"></circle>
+              <circle cx="16.5" cy="4.5" r="1.5"></circle>
+            </svg>
+          </div>
+          <div class="brand-logo-text">INDUSTRIAL<span>LAUNDRY</span></div>
+        </a>
+        <button class="drawer-close-btn" aria-label="Close Menu" id="mobile-drawer-close">
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+
+      <div class="drawer-body">
+                                <nav class="drawer-nav-links">
+          <div class="drawer-dropdown-wrap" style="width: 100%;">
+            <a href="javascript:void(0)" class="drawer-nav-link active"><span style="display:flex; align-items:center; gap:0.35rem;">Home <i data-lucide="chevron-down"></i></span></a>
+            <div class="drawer-dropdown-menu" style="display:flex; flex-direction:column; background:var(--bg-surface-elevated); border-radius:8px; margin-bottom:0.75rem; margin-top:0.5rem; padding: 0.5rem 0;">
+              <a href="index.html" class="drawer-nav-link active" style="border-bottom:none; padding:0.5rem 0; font-size:1rem;">Home 1</a>
+              <a href="home2.html" class="drawer-nav-link" style="border-bottom:none; padding:0.5rem 0; font-size:1rem;">Home 2</a>
+            </div>
+          </div>
+          <a href="about.html" class="drawer-nav-link">About</a>
+          <a href="services.html" class="drawer-nav-link">Services</a>
+          <a href="products.html" class="drawer-nav-link">Equipment</a>
+          <a href="comparison.html" class="drawer-nav-link">Compare</a>
+          <a href="blog.html" class="drawer-nav-link">Resources</a>
+          <a href="contact.html" class="drawer-nav-link">Contact</a>
+        </nav>
+
+                <div class="drawer-controls">
+          <div class="drawer-toggles" style="display:flex; justify-content:center; gap:1rem;">
+            <button class="btn-icon theme-toggle-btn" title="Toggle Theme" aria-label="Toggle Theme">
+              <i data-lucide="moon"></i>
+            </button>
+            <button class="btn-icon rtl-toggle-btn" title="Toggle LTR/RTL" aria-label="Toggle LTR/RTL">
+              <i data-lucide="arrow-left-right"></i>
+            </button>
+            <a href="login.html" class="btn-icon" title="Login" aria-label="Login">
+              <i data-lucide="user"></i>
+            </a>
+          </div>
+          <a href="contact.html" class="btn btn-primary" style="width:100%;">
+            <i data-lucide="file-text"></i> Request Quote
+          </a>
+        </div>
+    </aside>
+  </div>
+
+  <!-- ==========================================================================
+       HERO SECTION — SPLIT SHOWROOM COMPOSITION
+       ========================================================================== -->
+  <section class="hero-home tech-grid-bg">
+    <div class="container">
+      <div class="hero-grid">
+        <!-- Left Content -->
+        <div class="hero-content">
+          <div>
+            <span class="tech-badge tech-badge-accent">
+              <span class="status-indicator"></span> COMMERCIAL LAUNDRY SYSTEMS / 2026
+            </span>
+          </div>
+
+          <h1 class="hero-headline">
+            ENGINEERED FOR HEAVY-DUTY <span>LAUNDRY.</span>
+          </h1>
+
+          <p class="hero-description">
+            High-efficiency commercial washing machines, industrial drying tumblers, flatwork ironers, and OEM spare parts designed for 24/7 continuous operation in demanding environments.
+          </p>
+
+          <div class="hero-actions">
+            <a href="products.html" class="btn btn-primary" id="hero-cta-explore">
+              <i data-lucide="arrow-right"></i> Explore Equipment
+            </a>
+            <a href="contact.html" class="btn btn-outline" id="hero-cta-quote">
+              <i data-lucide="calculator"></i> Request a Quote
+            </a>
+          </div>
+
+          <div class="hero-specs-strip">
+            <div class="hero-spec-item">
+              <span class="hero-spec-value">35 – 100 KG</span>
+              <span class="hero-spec-label">LOAD CAPACITY</span>
+            </div>
+            <div class="hero-spec-item">
+              <span class="hero-spec-value">450 G-FORCE</span>
+              <span class="hero-spec-label">HIGH EXTRACTION</span>
+            </div>
+            <div class="hero-spec-item">
+              <span class="hero-spec-value">99.8%</span>
+              <span class="hero-spec-label">UPTIME RELIABILITY</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Media Showcase with Technical Overlays -->
+        <div class="hero-media-wrap">
+          <div class="scan-line"></div>
+          
+          <div class="overlay-chip chip-top-left">
+            <i data-lucide="cpu"></i> CAPACITY 35 KG / HIGH EFFICIENCY
+          </div>
+
+          <img src="https://images.unsplash.com/photo-1545173168-9f1947eebb7f?q=80&w=1200" alt="Commercial Laundry Heavy Machinery Showroom" loading="eager">
+          <div class="hero-tech-overlay"></div>
+
+          <div class="overlay-chip chip-bottom-right">
+            <i data-lucide="shield-check"></i> INDUSTRIAL LX-SERIES / 24/7 SERVICE
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION — HORIZONTAL EQUIPMENT SHOWROOM
+       ========================================================================== -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="section-header flex-between">
+        <div>
+          <span class="tech-badge">MACHINERY CATEGORIES</span>
+          <h2 class="section-title">COMMERCIAL LAUNDRY LINEUP</h2>
+        </div>
+        <a href="products.html" class="btn btn-outline">View All Catalog <i data-lucide="arrow-right"></i></a>
+      </div>
+
+      <div class="categories-grid">
+        <!-- Category 1 -->
+        <div class="category-card">
+          <div class="category-img-wrap">
+            <span class="category-number">01</span>
+            <img src="./image/Commercial Laundry.jpg" alt="Commercial Washers" loading="lazy">
+          </div>
+          <div class="category-content">
+            <h3 class="category-title">COMMERCIAL WASHERS</h3>
+            <p class="category-desc">High-capacity washer-extractors engineered for high G-force spin cycles and reduced water consumption.</p>
+            <div class="category-footer">
+              <span>15–80 KG Capacity</span>
+              <i data-lucide="arrow-right"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 2 -->
+        <div class="category-card">
+          <div class="category-img-wrap">
+            <span class="category-number">02</span>
+            <img src="./image/Washing Machines5.jpg" alt="Industrial Dryers" loading="lazy">
+          </div>
+          <div class="category-content">
+            <h3 class="category-title">INDUSTRIAL DRYERS</h3>
+            <p class="category-desc">Gas and steam heated drying tumblers with airflow control for rapid moisture removal.</p>
+            <div class="category-footer">
+              <span>20–100 KG Tumbler</span>
+              <i data-lucide="arrow-right"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 3 -->
+        <div class="category-card">
+          <div class="category-img-wrap">
+            <span class="category-number">03</span>
+            <img src="./image/Steam Ironing.jpg" alt="Ironing & Finishing" loading="lazy">
+          </div>
+          <div class="category-content">
+            <h3 class="category-title">IRONING & FINISHING</h3>
+            <p class="category-desc">Heavy-duty flatwork ironers, steam presses, and automated linen folders for hotel and hospital laundries.</p>
+            <div class="category-footer">
+              <span>1.6m – 3.2m Rollers</span>
+              <i data-lucide="arrow-right"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 4 -->
+        <div class="category-card">
+          <div class="category-img-wrap">
+            <span class="category-number">04</span>
+            <img src="./image/Office & Customer Supportdx.jpg" alt="Spare Parts & Components" loading="lazy">
+          </div>
+          <div class="category-content">
+            <h3 class="category-title">OEM SPARE PARTS</h3>
+            <p class="category-desc">Genuine factory replacement bearings, drain valves, belts, heating elements, and control boards.</p>
+            <div class="category-footer">
+              <span>10,000+ Parts In Stock</span>
+              <i data-lucide="arrow-right"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION — INTERACTIVE EQUIPMENT SELECTOR ("BUILT AROUND YOUR OPERATION")
+       ========================================================================== -->
+  <section class="section-padding-sm">
+    <div class="container">
+      <div class="selector-wrap tech-grid-bg">
+        <div class="selector-grid">
+          <!-- Controls Form -->
+          <div class="selector-form">
+            <div>
+              <span class="tech-badge tech-badge-accent">RECOMMENDATION ENGINE</span>
+              <h2 class="section-title" style="margin-top: 0.5rem;">BUILT AROUND YOUR OPERATION.</h2>
+              <p class="section-subtitle">Select your operational parameters to configure the optimal commercial laundry machinery package.</p>
+            </div>
+
+            <!-- Business Type -->
+            <div>
+              <label class="form-group-label"><i data-lucide="building-2"></i> Business Type</label>
+              <div class="pill-options">
+                <button class="pill-btn active" data-group="business" data-val="Laundromat">Laundromat</button>
+                <button class="pill-btn" data-group="business" data-val="Hotel">Hotel</button>
+                <button class="pill-btn" data-group="business" data-val="Hospital">Hospital</button>
+                <button class="pill-btn" data-group="business" data-val="Restaurant">Restaurant</button>
+                <button class="pill-btn" data-group="business" data-val="Apartment">Apartment</button>
+                <button class="pill-btn" data-group="business" data-val="Industrial Laundry">Industrial Laundry</button>
+              </div>
+            </div>
+
+            <!-- Load Capacity -->
+            <div>
+              <label class="form-group-label"><i data-lucide="weight"></i> Required Capacity</label>
+              <div class="pill-options">
+                <button class="pill-btn" data-group="capacity" data-val="10–20 KG">10–20 KG</button>
+                <button class="pill-btn active" data-group="capacity" data-val="20–40 KG">20–40 KG</button>
+                <button class="pill-btn" data-group="capacity" data-val="40–60 KG">40–60 KG</button>
+                <button class="pill-btn" data-group="capacity" data-val="60+ KG">60+ KG</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Result Display Card -->
+          <div class="recommendation-card" id="selector-result-card">
+            <span class="rec-model">MODEL: LX-450 / STAINLESS DRUM / 20–40 KG</span>
+            <h3 class="rec-title">HYDRA-PRO V-SERIES</h3>
+            <p style="color:#A0B2BA; font-size:0.9rem;">Optimized high-extraction washer system designed for continuous commercial throughput and maximum utility savings.</p>
+
+            <div class="rec-specs-grid">
+              <div class="rec-spec-item">
+                <span class="rec-spec-val">35 KG Load</span>
+                <span class="rec-spec-lbl">DRUM CAPACITY</span>
+              </div>
+              <div class="rec-spec-item">
+                <span class="rec-spec-val">98.4% Water Recovery</span>
+                <span class="rec-spec-lbl">ECO EFFICIENCY</span>
+              </div>
+              <div class="rec-spec-item">
+                <span class="rec-spec-val">1120 x 980 x 1450 mm</span>
+                <span class="rec-spec-lbl">DIMENSIONS</span>
+              </div>
+              <div class="rec-spec-item">
+                <span class="rec-spec-val">3-Year Commercial</span>
+                <span class="rec-spec-lbl">WARRANTY</span>
+              </div>
+            </div>
+
+            <div class="flex-between">
+              <span style="font-size:0.8rem; color:#A0B2BA;"><i data-lucide="truck"></i> Immediate Dispatch Available</span>
+              <a href="contact.html" class="btn btn-primary"><i data-lucide="file-text"></i> Request Quote</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION — PRODUCT SPOTLIGHT (LX-450 HEAVY DUTY)
+       ========================================================================== -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="spotlight-card">
+        <div class="spotlight-media">
+          <video autoplay loop muted playsinline style="width:100%; height:100%; object-fit:cover;" poster="./image/Commercial Laundryd.jpg">
+            <source src="./viseod/8756951-uhd_4096_2160_25fps.mp4" type="video/mp4">
+            <source src="./viseod/12942866_1920_1080_30fps.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="spotlight-info">
+          <span class="tech-badge tech-badge-accent">PRODUCT SPOTLIGHT</span>
+          <h2 class="spotlight-title">INDUSTRIAL SERIES / LX-450</h2>
+          <p>Built with heavy gauge 304-grade stainless steel, precision inverter drive motors, and dual water inlet valves for high-speed cycle turns.</p>
+
+          <div class="spotlight-specs-list">
+            <div class="spotlight-spec-box">
+              <div class="spotlight-spec-value">45 KG</div>
+              <div class="spotlight-spec-name">DRUM CAPACITY</div>
+            </div>
+            <div class="spotlight-spec-box">
+              <div class="spotlight-spec-value">1200 RPM</div>
+              <div class="spotlight-spec-name">SPIN SPEED</div>
+            </div>
+            <div class="spotlight-spec-box">
+              <div class="spotlight-spec-value">304 STAINLESS</div>
+              <div class="spotlight-spec-name">DRUM MATERIAL</div>
+            </div>
+            <div class="spotlight-spec-box">
+              <div class="spotlight-spec-value">SMART TOUCH</div>
+              <div class="spotlight-spec-name">MICROPROCESSOR</div>
+            </div>
+          </div>
+
+          <div class="flex" style="gap:1rem;">
+            <a href="product-details.html" class="btn btn-primary">View Technical Details <i data-lucide="arrow-right"></i></a>
+            <a href="comparison.html" class="btn btn-outline">Compare Specs</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION — INDUSTRIES SERVED (VERTICAL INTERACTIVE LIST)
+       ========================================================================== -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="section-header">
+        <span class="tech-badge">SECTOR SOLUTIONS</span>
+        <h2 class="section-title">INDUSTRIES WE SERVE</h2>
+      </div>
+
+      <div class="industries-layout">
+        <!-- Interactive List -->
+        <div class="industry-list">
+          <div class="industry-item active" data-img="./image/Washing Machines.jpg" data-title="LAUNDROMATS & COIN-OP" data-desc="Heavy-duty coin, card, and app-operated laundry machinery with high durability and fast turn times for high traffic stores.">
+            <div class="industry-left">
+              <span class="industry-num">01</span>
+              <h3 class="industry-name">LAUNDROMATS & COIN-OP</h3>
+            </div>
+            <i data-lucide="arrow-right"></i>
+          </div>
+
+          <div class="industry-item" data-img="./image/Dry Cleaningq.jpg" data-title="HOTELS & RESORTS" data-desc="High-capacity on-premises laundry (OPL) machinery delivering crisp bed linens, plush towels, and rapid turnaround for hospitality.">
+            <div class="industry-left">
+              <span class="industry-num">02</span>
+              <h3 class="industry-name">HOTELS & RESORTS</h3>
+            </div>
+            <i data-lucide="arrow-right"></i>
+          </div>
+
+          <div class="industry-item" data-img="./image/Washing Machines7.jpg" data-title="HOSPITALS & HEALTHCARE" data-desc="Hygienic barrier washers complying with RABC standards to prevent cross-contamination in medical linen operations.">
+            <div class="industry-left">
+              <span class="industry-num">03</span>
+              <h3 class="industry-name">HOSPITALS & HEALTHCARE</h3>
+            </div>
+            <i data-lucide="arrow-right"></i>
+          </div>
+
+          <div class="industry-item" data-img="./image/Steam Ironingd.jpg" data-title="RESTAURANTS & CATERING" data-desc="Grease and stain extraction washers with thermal steam injection for table linens and chef uniforms.">
+            <div class="industry-left">
+              <span class="industry-num">04</span>
+              <h3 class="industry-name">RESTAURANTS & CATERING</h3>
+            </div>
+            <i data-lucide="arrow-right"></i>
+          </div>
+
+          <div class="industry-item" data-img="./image/Washing Machines4.jpg" data-title="APARTMENT COMPLEXES" data-desc="Commercial stacked washer-dryer units optimized for tenant multi-housing utility control and quiet operation.">
+            <div class="industry-left">
+              <span class="industry-num">05</span>
+              <h3 class="industry-name">APARTMENT COMPLEXES</h3>
+            </div>
+            <i data-lucide="arrow-right"></i>
+          </div>
+
+          <div class="industry-item" data-img="./image/Commercial Laundryr.jpg" data-title="INDUSTRIAL LAUNDRIES" data-desc="Continuous tunnel washers, heavy presses, and high-volume dry-cleaning plants engineered for 24/7 industrial production.">
+            <div class="industry-left">
+              <span class="industry-num">06</span>
+              <h3 class="industry-name">INDUSTRIAL LAUNDRIES</h3>
+            </div>
+            <i data-lucide="arrow-right"></i>
+          </div>
+        </div>
+
+        <!-- Dynamic Preview Image -->
+        <div class="industry-media-preview">
+          <img id="industry-preview-img" src="./image/Washing Machines.jpg" alt="Industry Preview" loading="lazy">
+          <div class="industry-overlay-info">
+            <h3 id="industry-preview-title" style="font-size:1.5rem; text-transform:uppercase;">LAUNDROMATS & COIN-OP</h3>
+            <p id="industry-preview-desc" style="font-size:0.9rem; color:#A0B2BA; margin-top:0.35rem;">Heavy-duty coin, card, and app-operated laundry machinery with high durability and fast turn times for high traffic stores.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION — TECHNICAL STATISTICS & ENGINEERING PROOF
+       ========================================================================== -->
+  <section class="section-padding-sm">
+    <div class="container">
+      <div class="stats-banner">
+        <div class="stats-grid">
+          <div class="stat-box">
+            <span class="stat-num" data-count="18" data-suffix="+">0</span>
+            <span class="stat-label">Years Industry Experience</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-num" data-count="2400" data-suffix="+">0</span>
+            <span class="stat-label">Machines Installed</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-num" data-count="98" data-suffix="%">0</span>
+            <span class="stat-label">Service Satisfaction Rate</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-num" data-count="24" data-prefix="" data-suffix="/7">24/7</span>
+            <span class="stat-label">Technical Emergency Support</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION — SERVICE WORKFLOW TIMELINE
+       ========================================================================== -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="section-header center">
+        <span class="tech-badge">EXECUTION PROTOCOL</span>
+        <h2 class="section-title">OUR 6-STEP SERVICE SYSTEM</h2>
+        <p class="section-subtitle">From initial site consultation to post-installation warranty maintenance, we manage every phase of your commercial laundry machinery.</p>
+      </div>
+
+      <div class="timeline-grid">
+        <div class="timeline-step">
+          <span class="timeline-num">01</span>
+          <h3 class="timeline-title">CONSULTATION</h3>
+          <p class="timeline-desc">Utility audit, volume analysis, and architectural workflow planning for your laundry room.</p>
+        </div>
+
+        <div class="timeline-step">
+          <span class="timeline-num">02</span>
+          <h3 class="timeline-title">SELECTION</h3>
+          <p class="timeline-desc">Matching G-force rating, heating type, and load capacities to your budget.</p>
+        </div>
+
+        <div class="timeline-step">
+          <span class="timeline-num">03</span>
+          <h3 class="timeline-title">DELIVERY</h3>
+          <p class="timeline-desc">Heavy transport rigging and logistics management direct to your facility floor.</p>
+        </div>
+
+        <div class="timeline-step">
+          <span class="timeline-num">04</span>
+          <h3 class="timeline-title">INSTALLATION</h3>
+          <p class="timeline-desc">Professional electrical, steam line, plumbing, and exhaust ductwork connection.</p>
+        </div>
+
+        <div class="timeline-step">
+          <span class="timeline-num">05</span>
+          <h3 class="timeline-title">COMMISSIONING</h3>
+          <p class="timeline-desc">Calibration testing, vibration dampening, and operator staff safety training.</p>
+        </div>
+
+        <div class="timeline-step">
+          <span class="timeline-num">06</span>
+          <h3 class="timeline-title">AFTER-SALES</h3>
+          <p class="timeline-desc">24/7 emergency repair dispatch, OEM spare parts supply, and preventative care.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION — BRAND PARTNERS WALL
+       ========================================================================== -->
+  <section class="section-padding-sm">
+    <div class="container">
+      <div class="section-header flex-between">
+        <div>
+          <span class="tech-badge">OEM MANUFACTURERS</span>
+          <h2 class="section-title">ENGINEERING BRAND PARTNERS</h2>
+        </div>
+        <span style="font-size:0.85rem; color:var(--text-muted);">OEM Factory Certified Service Center</span>
+      </div>
+
+      <div class="brands-grid">
+        <div class="brand-card">
+          <div class="brand-name">HYDRA-PRESS</div>
+          <div class="brand-meta">GERMANY / WASHERS</div>
+        </div>
+        <div class="brand-card">
+          <div class="brand-name">THERMO-TUMBLE</div>
+          <div class="brand-meta">SWEDEN / DRYERS</div>
+        </div>
+        <div class="brand-card">
+          <div class="brand-name">FINISH-MASTER</div>
+          <div class="brand-meta">ITALY / IRONERS</div>
+        </div>
+        <div class="brand-card">
+          <div class="brand-name">STEEL-DRIVE</div>
+          <div class="brand-meta">USA / EXTRACTORS</div>
+        </div>
+        <div class="brand-card">
+          <div class="brand-name">VORTEX-STEAM</div>
+          <div class="brand-meta">JAPAN / BOILERS</div>
+        </div>
+        <div class="brand-card">
+          <div class="brand-name">PRECISION-OEM</div>
+          <div class="brand-meta">UK / COMPONENT PARTS</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION — EDITORIAL TESTIMONIALS
+       ========================================================================== -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="testimonial-layout">
+        <div>
+          <div class="quote-symbol">“</div>
+          <p class="quote-text">
+            Upgrading our 120-bed hotel to Hydra-Press commercial washers cut our water consumption by 34% and reduced dryer cycle times by 15 minutes per load. Their technical installation team had us running in under 48 hours.
+          </p>
+          <div class="quote-author">MARCUS VANDERBILT</div>
+          <div class="quote-role">Director of Operations, Imperial Grand Hotel & Suites</div>
+        </div>
+
+        <div class="testimonial-meta-box">
+          <div class="meta-row">
+            <span class="meta-label">Business Sector</span>
+            <span class="meta-value">Luxury Hospitality</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-label">Equipment Suite</span>
+            <span class="meta-value">4x LX-450 + 4x Tumblers</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-label">Installation Year</span>
+            <span class="meta-value">2025 Commissioned</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-label">Service Rating</span>
+            <span class="meta-value" style="color:var(--accent);">★ ★ ★ ★ ★ (5.0)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION — DRAMATIC FINAL CTA
+       ========================================================================== -->
+  <section class="section-padding-sm">
+    <div class="container">
+      <div class="final-cta">
+        <h2 class="final-cta-title">READY TO UPGRADE YOUR LAUNDRY OPERATION?</h2>
+        <p class="final-cta-subtitle">Talk to our commercial equipment specialists about new machines, installation quotes, OEM spare parts, or immediate emergency repairs.</p>
+        
+        <div class="final-cta-buttons">
+          <a href="contact.html" class="btn btn-primary" id="final-cta-btn-quote"><i data-lucide="file-text"></i> Request Equipment Quote</a>
+          <a href="contact.html" class="btn btn-secondary" id="final-cta-btn-specialist"><i data-lucide="phone-call"></i> Talk to a Specialist</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SITE FOOTER (Identical across pages)
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1: Brand -->
+        <div>
+          <div class="brand-logo" style="color:#FFFFFF; margin-bottom:1rem;">
+            <div class="brand-logo-icon">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect>
+  <line x1="4" y1="7" x2="20" y2="7"></line>
+  <circle cx="12" cy="14" r="4.5"></circle>
+  <path d="M12 11a3 3 0 0 0-3 3"></path>
+  <circle cx="7.5" cy="4.5" r="0.5" fill="currentColor"></circle>
+  <circle cx="10" cy="4.5" r="0.5" fill="currentColor"></circle>
+  <circle cx="16.5" cy="4.5" r="1.5"></circle>
+</svg>
+</div>
+            <div class="brand-logo-text">INDUSTRIAL<span>LAUNDRY</span></div>
+          </div>
+          <p style="font-size:0.85rem; color:#A0B2BA; margin-bottom:1.5rem;">
+            Leader in heavy-duty commercial laundry machinery sales, turnkey installation, preventative maintenance, and 24/7 technical repair.
+          </p>
+                    <div style="display:flex; gap:0.75rem; margin-top:1.5rem; margin-bottom:1.5rem; align-items:center;">
+            <a href="#" class="footer-social-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
+            <a href="#" class="footer-social-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
+            </a>
+            <a href="#" class="footer-social-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+            <a href="#" class="footer-social-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+          </div>
+          <div class="tech-badge tech-badge-accent">
+            <span class="status-indicator"></span> DISPATCH ACTIVE: 24/7 SUPPORT
+          </div>
+        </div>
+
+        <!-- Col 2: Equipment -->
+        <div>
+          <h4 class="footer-col-title">EQUIPMENT</h4>
+          <div class="footer-links">
+            <a href="products.html" class="footer-link">Commercial Washers</a>
+            <a href="products.html" class="footer-link">Industrial Dryers</a>
+            <a href="products.html" class="footer-link">Ironing & Finishing</a>
+            <a href="products.html" class="footer-link">Barrier Washers</a>
+            <a href="products.html" class="footer-link">OEM Spare Parts</a>
+          </div>
+        </div>
+
+        <!-- Col 3: Services -->
+        <div>
+          <h4 class="footer-col-title">SERVICES</h4>
+          <div class="footer-links">
+            <a href="services.html" class="footer-link">Turnkey Installation</a>
+            <a href="services.html" class="footer-link">Preventative Maintenance</a>
+            <a href="services.html" class="footer-link">Washer Diagnostics</a>
+            <a href="services.html" class="footer-link">Dryer System Repair</a>
+            <a href="services.html" class="footer-link">Emergency Assistance</a>
+          </div>
+        </div>
+
+        <!-- Col 4: Company -->
+        <div>
+          <h4 class="footer-col-title">COMPANY</h4>
+          <div class="footer-links">
+            <a href="about.html" class="footer-link">About Engineering</a>
+            <a href="comparison.html" class="footer-link">Brand Comparison</a>
+            <a href="blog.html" class="footer-link">Knowledge Center</a>
+            <a href="contact.html" class="footer-link">B2B Enquiry</a>
+            <a href="login.html" class="footer-link">Portal Login</a>
+          </div>
+        </div>
+
+        <!-- Col 5: Newsletter -->
+        <div>
+          <h4 class="footer-col-title">TECH BULLETIN</h4>
+          <p style="font-size:0.85rem; color:#A0B2BA; margin-bottom:1rem;">Subscribe for maintenance protocols and equipment efficiency guides.</p>
+          <form onsubmit="event.preventDefault(); alert('Subscribed to Technical Bulletin');">
+            <input type="email" placeholder="Enter company email..." required class="form-input" style="margin-bottom:0.75rem; font-size:0.85rem;">
+            <button type="submit" class="btn btn-primary" style="width:100%; font-size:0.8rem; padding:0.6rem 1rem;">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>Â© 2026 Laundry Equipment Sales & Repair. All Rights Reserved.</div>
+        <button class="back-to-top" aria-label="Back to Top">
+          BACK TO TOP <i data-lucide="arrow-up"></i>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript File -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
+
+
+
+
+
+

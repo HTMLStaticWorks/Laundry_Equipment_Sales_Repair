@@ -1,0 +1,87 @@
+/* ==========================================================================
+   RIGHT-TO-LEFT (RTL) STYLESHEET — LAUNDRY EQUIPMENT SALES & REPAIR
+   ========================================================================== */
+
+[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+[dir="rtl"] body {
+  font-family: 'Manrope', system-ui, -apple-system, sans-serif;
+}
+
+/* Logical Margin & Padding Adjustments */
+[dir="rtl"] .tech-line::after {
+  left: auto;
+  right: 0;
+}
+
+[dir="rtl"] .chip-top-left {
+  left: auto;
+  right: 1.5rem;
+  border-left: none;
+  border-right: 3px solid var(--accent);
+}
+
+[dir="rtl"] .chip-bottom-right {
+  right: auto;
+  left: 1.5rem;
+  border-right: none;
+  border-left: 3px solid var(--secondary);
+}
+
+/* Mobile Drawer Slide From Left in RTL */
+[dir="rtl"] .mobile-drawer {
+  right: auto;
+  left: 0;
+  transform: translateX(-100%);
+  box-shadow: 8px 0 32px rgba(0, 0, 0, 0.5);
+}
+
+[dir="rtl"] .mobile-drawer-overlay.open .mobile-drawer {
+  transform: translateX(0);
+}
+
+/* Border Accent Adjustments */
+[dir="rtl"] .spotlight-spec-box {
+  border-left: none;
+  border-right: 3px solid var(--secondary);
+}
+
+[dir="rtl"] .testimonial-meta-box {
+  border-left: none;
+  border-right: 4px solid var(--accent);
+}
+
+[dir="rtl"] .industry-item:hover, [dir="rtl"] .industry-item.active {
+  padding-left: 1rem;
+  padding-right: 1.75rem;
+}
+
+/* Icon & Chevron Rotations */
+[dir="rtl"] .lucide-chevron-right,
+[dir="rtl"] .lucide-arrow-right {
+  transform: rotate(180deg);
+}
+
+/* --- AUTH PASSWORD RTL OVERRIDES --- */
+[dir="rtl"] .auth-card input[type="password"] {
+  padding-right: 1rem !important;
+  padding-left: 2.5rem !important;
+}
+[dir="rtl"] .auth-card button[onclick*="type='text'"] {
+  right: auto !important;
+  left: 0.85rem !important;
+}
+
+/* Table alignments */
+[dir="rtl"] .comparison-table {
+  text-align: right;
+}
+
+[dir="rtl"] .comparison-table th, 
+[dir="rtl"] .comparison-table td {
+  border-right: none;
+  border-left: 1px solid var(--border-color);
+}
