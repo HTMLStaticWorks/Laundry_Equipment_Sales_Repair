@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" data-theme="dark" dir="ltr">
 <head>
   <meta charset="UTF-8">
@@ -14,10 +14,10 @@
 </head>
 <body class="auth-container">
   <div style="position: absolute; top: 1.5rem; right: 2rem; display: flex; gap: 0.5rem; z-index: 10;">
-    <button class="btn-icon theme-toggle-btn" title="Toggle Theme" aria-label="Toggle Theme" style="background:var(--bg-surface); border:1px solid var(--border-color); color:var(--text-primary); cursor:pointer; width:40px; height:40px; border-radius:50%; display:flex; align-items:center; justify-content:center; transition:all 0.3s ease;">
+    <button class="btn-icon theme-toggle-btn" title="Toggle Theme" aria-label="Toggle Theme">
       <i data-lucide="moon" style="width:18px; height:18px;"></i>
     </button>
-    <button class="btn-icon rtl-toggle-btn" title="Toggle LTR/RTL" aria-label="Toggle LTR/RTL" style="background:var(--bg-surface); border:1px solid var(--border-color); color:var(--text-primary); cursor:pointer; width:40px; height:40px; border-radius:50%; display:flex; align-items:center; justify-content:center; transition:all 0.3s ease;">
+    <button class="btn-icon rtl-toggle-btn" title="Toggle LTR/RTL" aria-label="Toggle LTR/RTL">
       <i data-lucide="arrow-left-right" style="width:18px; height:18px;"></i>
     </button>
   </div>
@@ -51,7 +51,7 @@
         <label class="form-label" for="login-password" style="margin-bottom:0.5rem; display:block;">Password</label>
         <div style="position:relative; width:100%; margin-bottom:0.75rem;">
           <input type="password" id="login-password" class="form-input" placeholder="••••••••" required style="padding-right:2.5rem;">
-          <button type="button" onclick="const p=document.getElementById('login-password'); const i=this.querySelector('i'); if(p.type==='password'){p.type='text';i.setAttribute('data-lucide','eye-off');}else{p.type='password';i.setAttribute('data-lucide','eye');} lucide.createIcons();" style="position:absolute; right:0.85rem; top:50%; transform:translateY(-50%); background:none; border:none; cursor:pointer; color:var(--text-muted); padding:0; display:flex; align-items:center; justify-content:center;">
+          <button type="button" class="pass-toggle-btn" onclick="const p=document.getElementById('login-password'); const i=this.querySelector('i'); if(p.type==='password'){p.type='text';i.setAttribute('data-lucide','eye-off');}else{p.type='password';i.setAttribute('data-lucide','eye');} lucide.createIcons();" style="position:absolute; right:0.85rem; top:50%; transform:translateY(-50%); background:none; border:none; cursor:pointer; padding:0; display:flex; align-items:center; justify-content:center;">
             <i data-lucide="eye" style="width:1.1rem; height:1.1rem;"></i>
           </button>
         </div>
@@ -87,7 +87,7 @@
     </form>
 
     <div style="text-align:center; font-size:0.85rem; color:var(--text-secondary);">
-      Don't have a commercial account? <a href="register.html" style="color:var(--accent); font-weight:600;">Register Here</a>
+      Don't have a commercial account? <a href="register.html" class="text-link" style="font-weight:600;">Register Here</a>
     </div>
   </div>
 

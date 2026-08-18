@@ -14,10 +14,10 @@
 </head>
 <body class="auth-container">
   <div style="position: absolute; top: 1.5rem; right: 2rem; display: flex; gap: 0.5rem; z-index: 10;">
-    <button class="btn-icon theme-toggle-btn" title="Toggle Theme" aria-label="Toggle Theme" style="background:var(--bg-surface); border:1px solid var(--border-color); color:var(--text-primary); cursor:pointer; width:40px; height:40px; border-radius:50%; display:flex; align-items:center; justify-content:center; transition:all 0.3s ease;">
+    <button class="btn-icon theme-toggle-btn" title="Toggle Theme" aria-label="Toggle Theme">
       <i data-lucide="moon" style="width:18px; height:18px;"></i>
     </button>
-    <button class="btn-icon rtl-toggle-btn" title="Toggle LTR/RTL" aria-label="Toggle LTR/RTL" style="background:var(--bg-surface); border:1px solid var(--border-color); color:var(--text-primary); cursor:pointer; width:40px; height:40px; border-radius:50%; display:flex; align-items:center; justify-content:center; transition:all 0.3s ease;">
+    <button class="btn-icon rtl-toggle-btn" title="Toggle LTR/RTL" aria-label="Toggle LTR/RTL">
       <i data-lucide="arrow-left-right" style="width:18px; height:18px;"></i>
     </button>
   </div>
@@ -57,7 +57,7 @@
           <label class="form-label" for="reg-pass">Password</label>
           <div style="position:relative; width:100%;">
             <input type="password" id="reg-pass" class="form-input" placeholder="••••••••" required style="padding-right:2.5rem;">
-            <button type="button" onclick="const passInput=document.getElementById('reg-pass'); const passIcon=this.querySelector('i'); if(passInput.type==='password'){passInput.type='text';passIcon.setAttribute('data-lucide','eye-off');}else{passInput.type='password';passIcon.setAttribute('data-lucide','eye');} lucide.createIcons();" style="position:absolute; right:0.85rem; top:50%; transform:translateY(-50%); background:none; border:none; cursor:pointer; color:var(--text-muted); padding:0; display:flex; align-items:center; justify-content:center;">
+            <button type="button" class="pass-toggle-btn" onclick="const passInput=document.getElementById('reg-pass'); const passIcon=this.querySelector('i'); if(passInput.type==='password'){passInput.type='text';passIcon.setAttribute('data-lucide','eye-off');}else{passInput.type='password';passIcon.setAttribute('data-lucide','eye');} lucide.createIcons();" style="position:absolute; right:0.85rem; top:50%; transform:translateY(-50%); background:none; border:none; cursor:pointer; padding:0; display:flex; align-items:center; justify-content:center;">
               <i data-lucide="eye" style="width:1.1rem; height:1.1rem;"></i>
             </button>
           </div>
@@ -66,7 +66,7 @@
           <label class="form-label" for="reg-cpass">Confirm Password</label>
           <div style="position:relative; width:100%;">
             <input type="password" id="reg-cpass" class="form-input" placeholder="••••••••" required style="padding-right:2.5rem;">
-            <button type="button" onclick="const cpassInput=document.getElementById('reg-cpass'); const cpassIcon=this.querySelector('i'); if(cpassInput.type==='password'){cpassInput.type='text';cpassIcon.setAttribute('data-lucide','eye-off');}else{cpassInput.type='password';cpassIcon.setAttribute('data-lucide','eye');} lucide.createIcons();" style="position:absolute; right:0.85rem; top:50%; transform:translateY(-50%); background:none; border:none; cursor:pointer; color:var(--text-muted); padding:0; display:flex; align-items:center; justify-content:center;">
+            <button type="button" class="pass-toggle-btn" onclick="const cpassInput=document.getElementById('reg-cpass'); const cpassIcon=this.querySelector('i'); if(cpassInput.type==='password'){cpassInput.type='text';cpassIcon.setAttribute('data-lucide','eye-off');}else{cpassInput.type='password';cpassIcon.setAttribute('data-lucide','eye');} lucide.createIcons();" style="position:absolute; right:0.85rem; top:50%; transform:translateY(-50%); background:none; border:none; cursor:pointer; padding:0; display:flex; align-items:center; justify-content:center;">
               <i data-lucide="eye" style="width:1.1rem; height:1.1rem;"></i>
             </button>
           </div>
@@ -76,7 +76,7 @@
       <div class="form-group" style="margin-bottom:1.5rem;">
         <label style="display:flex; align-items:center; gap:0.5rem; font-size:0.8rem; color:#A0B2BA; cursor:pointer;">
           <input type="checkbox" required style="accent-color:var(--accent);">
-          I agree to the Commercial Terms of Service & Privacy Policy
+          I agree to the <a href="#" class="text-link">Commercial Terms of Service & Privacy Policy</a>
         </label>
       </div>
 
@@ -103,7 +103,7 @@
     </form>
 
     <div style="text-align:center; font-size:0.85rem; color:var(--text-secondary);">
-      Already have an account? <a href="login.html" style="color:var(--accent); font-weight:600;">Sign In</a>
+      Already have an account? <a href="login.html" class="text-link" style="font-weight:600;">Sign In</a>
     </div>
   </div>
 

@@ -12,6 +12,14 @@
 }
 
 /* Logical Margin & Padding Adjustments */
+[dir="rtl"] .brand-logo-text {
+  direction: ltr;
+}
+
+[dir="rtl"] .site-header .brand-logo {
+  margin-right: 0 !important;
+  margin-left: 2.5rem !important;
+}
 [dir="rtl"] .tech-line::after {
   left: auto;
   right: 0;

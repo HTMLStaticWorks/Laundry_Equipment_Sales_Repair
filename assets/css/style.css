@@ -113,6 +113,23 @@ a {
   transition: color var(--transition-fast);
 }
 
+.text-link {
+  color: var(--accent);
+  transition: all var(--transition-fast);
+}
+
+.text-link:hover {
+  text-decoration: underline;
+}
+
+.pass-toggle-btn {
+  color: var(--text-muted);
+  transition: color var(--transition-fast);
+}
+.pass-toggle-btn:hover {
+  color: var(--accent);
+}
+
 ul, ol {
   list-style: none;
 }
@@ -255,6 +272,12 @@ button {
   box-shadow: 0 6px 20px rgba(242, 140, 40, 0.4);
 }
 
+.btn-primary:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 4px rgba(242, 140, 40, 0.6);
+  background-color: #C86815;
+}
+
 .btn-secondary {
   background-color: var(--primary);
   color: #FFFFFF;
@@ -274,6 +297,11 @@ button {
   transform: translateY(-2px);
 }
 
+.btn-secondary:active {
+  transform: translateY(1px);
+  background-color: var(--primary);
+}
+
 .btn-outline {
   background: transparent;
   color: var(--text-primary);
@@ -284,6 +312,11 @@ button {
   border-color: var(--accent);
   color: var(--accent);
   background-color: rgba(242, 140, 40, 0.05);
+}
+
+.btn-outline:active {
+  transform: translateY(1px);
+  background-color: rgba(242, 140, 40, 0.1);
 }
 
 .btn-icon {
@@ -386,6 +419,12 @@ button {
 
 [data-theme="dark"] .brand-logo-icon {
   background-color: var(--bg-surface-elevated);
+}
+
+.brand-logo-text {
+  line-height: 1;
+  display: flex;
+  align-items: center;
 }
 
 .brand-logo-text span {
@@ -654,6 +693,14 @@ button {
 
 .drawer-nav-link:hover, .drawer-nav-link.active {
   color: var(--accent);
+}
+
+.drawer-dropdown-menu {
+  display: none !important;
+}
+
+.drawer-dropdown-wrap.open .drawer-dropdown-menu {
+  display: flex !important;
 }
 
 .drawer-controls {
@@ -1008,16 +1055,21 @@ button {
   color: var(--accent);
 }
 
+.pill-btn:active {
+  transform: translateY(1px);
+  background-color: rgba(242, 140, 40, 0.25);
+}
+
 /* Recommendation Result Card */
 .recommendation-card {
-  background-color: var(--primary);
-  color: #FFFFFF;
+  background-color: var(--bg-surface);
+  color: var(--text-primary);
   border-radius: var(--radius-md);
   padding: 2.25rem;
   position: relative;
   overflow: hidden;
   box-shadow: var(--shadow-lg);
-  border: 1px solid var(--secondary);
+  border: 1px solid var(--border-color);
 }
 
 .recommendation-card::before {
@@ -1037,7 +1089,7 @@ button {
 
 .rec-title {
   font-size: 1.75rem;
-  color: #FFFFFF;
+  color: var(--text-primary);
   text-transform: uppercase;
   margin-bottom: 0.25rem;
 }
@@ -1058,8 +1110,8 @@ button {
   gap: 1.25rem;
   margin: 1.5rem 0;
   padding: 1.25rem 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
 }
 
 .rec-spec-item {
@@ -1071,12 +1123,12 @@ button {
   font-family: var(--font-heading);
   font-size: 1.1rem;
   font-weight: 700;
-  color: #FFFFFF;
+  color: var(--text-primary);
 }
 
 .rec-spec-lbl {
   font-size: 0.75rem;
-  color: #A0B2BA;
+  color: var(--text-secondary);
   text-transform: uppercase;
 }
 
@@ -1583,6 +1635,7 @@ button {
   font-size: 0.7rem;
   padding: 0.2rem 0.5rem;
   border-radius: var(--radius-sm);
+  z-index: 2;
 }
 
 .product-content {
@@ -1590,6 +1643,11 @@ button {
   display: flex;
   flex-direction: column;
   flex: 1;
+}
+
+.product-content > .btn,
+.product-content > a.btn {
+  margin-top: auto;
 }
 
 .product-model {
@@ -1919,14 +1977,7 @@ button {
     grid-template-columns: repeat(3, 1fr);
   }
   .footer-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 3rem;
-  }
-  .footer-grid > * {
-    flex: 1 1 calc(33.333% - 2rem);
-    min-width: 250px;
+    gap: 1.5rem;
   }
 }
 
@@ -2027,6 +2078,11 @@ button {
     white-space: nowrap;
     overflow: hidden;
   }
+  .auth-card .brand-logo {
+    max-width: 100%;
+    margin: 0 auto;
+    justify-content: center;
+  }
   .brand-logo-icon {
     width: 34px;
     height: 34px;
@@ -2090,6 +2146,7 @@ button {
     text-align: center;
   }
   .footer-grid {
+    display: flex;
     flex-direction: column;
     align-items: center;
     gap: 2.25rem;
@@ -2163,6 +2220,9 @@ button {
   }
   .products-grid > * {
     width: 100%;
+  }
+  div[style*="repeat(3"] > * {
+    width: 100% !important;
   }
   .timeline-grid {
     grid-template-columns: 1fr;
@@ -2361,4 +2421,244 @@ button {
   color: var(--text-primary) !important;
 }
 
+/* ==========================================================================
+   TABLET CENTERING OVERRIDES (SPLIT SECTIONS)
+   ========================================================================== */
+@media (max-width: 1024px) {
+  /* Center tag and buttons in generic split grid sections */
+  div[style*="display:grid"] > div > .tech-badge,
+  div[style*="display: grid"] > div > .tech-badge {
+    display: flex !important;
+    width: max-content;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  
+  div[style*="display:grid"] > div > a.btn,
+  div[style*="display: grid"] > div > a.btn,
+  div[style*="display:grid"] > div > div[style*="text-align: left"] > a.btn,
+  div[style*="display: grid"] > div > div[style*="text-align: left"] > a.btn {
+    display: flex !important;
+  }
+  .industry-name {
+    font-size: 1.15rem;
+  }
+  .brand-name {
+    font-size: 1rem;
+  }
+  .mobile-drawer {
+    max-width: 290px;
+    width: 88vw;
+  }
+}
 
+/* --- Social Media Footer Icons --- */
+.btn {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.footer-social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: transparent;
+  color: #A0B2BA;
+  border: 1px solid rgba(160, 178, 186, 0.3);
+  transition: all 0.3s ease;
+}
+.footer-social-icon:hover {
+  background-color: var(--accent);
+  color: #FFFFFF;
+  border-color: var(--accent);
+  transform: translateY(-3px);
+}
+
+.contact-social-icon {
+  color: var(--text-secondary);
+  transition: all var(--transition-fast);
+}
+.contact-social-icon:hover {
+  color: var(--accent);
+  transform: translateY(-2px);
+}
+
+/* --- LIGHT MODE FOOTER OVERRIDES --- */
+[data-theme="light"] .site-footer {
+  background-color: #FFFFFF !important;
+  border-top: 1px solid var(--border-color) !important;
+  color: var(--text-primary) !important;
+}
+[data-theme="light"] .site-footer .footer-col-title {
+  color: var(--text-primary) !important;
+}
+[data-theme="light"] .site-footer p {
+  color: var(--text-secondary) !important;
+}
+[data-theme="light"] .site-footer .footer-link {
+  color: var(--text-secondary) !important;
+}
+[data-theme="light"] .site-footer .footer-link:hover {
+  color: var(--accent) !important;
+}
+[data-theme="light"] .site-footer .brand-logo-text {
+  color: var(--text-primary) !important;
+}
+[data-theme="light"] .site-footer .brand-logo {
+  color: var(--text-primary) !important;
+}
+[data-theme="light"] .site-footer .footer-bottom {
+  border-top-color: var(--border-color) !important;
+  color: var(--text-muted) !important;
+}
+[data-theme="light"] .footer-social-icon {
+  color: var(--text-secondary) !important;
+  border-color: var(--border-color) !important;
+}
+[data-theme="light"] .footer-social-icon:hover {
+  background-color: var(--accent) !important;
+  color: #FFFFFF !important;
+  border-color: var(--accent) !important;
+}
+
+/* --- LIGHT MODE AUTH OVERRIDES --- */
+[data-theme="light"] .auth-container {
+  background-color: #FFFFFF !important;
+  background-image: none !important;
+}
+[data-theme="light"] .auth-card {
+  background-color: #FFFFFF !important;
+  border-color: var(--border-color) !important;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.1) !important;
+  color: var(--text-primary) !important;
+}
+[data-theme="light"] .auth-card .form-label {
+  color: var(--text-primary) !important;
+}
+[data-theme="light"] .auth-card .form-input {
+  background-color: #FFFFFF !important;
+  border-color: var(--border-color) !important;
+  color: var(--text-primary) !important;
+}
+[data-theme="light"] .auth-card .form-input:focus {
+  border-color: var(--accent) !important;
+  box-shadow: 0 0 0 3px rgba(242,140,40,0.1) !important;
+}
+[data-theme="light"] .auth-card .btn-outline {
+  border-color: var(--border-color) !important;
+  color: var(--text-primary) !important;
+}
+[data-theme="light"] .auth-card .btn-outline:hover {
+  background-color: rgba(0,0,0,0.03) !important;
+}
+
+/* --- QUOTE MODAL (Dynamic Popup) --- */
+.quote-modal-overlay {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(16, 23, 25, 0.8);
+  backdrop-filter: blur(8px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+.quote-modal-overlay.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+.quote-modal-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  width: 90%;
+  max-width: 540px;
+  position: relative;
+  transform: translateY(20px);
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 24px 48px rgba(0,0,0,0.4);
+}
+.quote-modal-overlay.open .quote-modal-card {
+  transform: translateY(0);
+}
+.quote-modal-close {
+  position: absolute;
+  top: 1.25rem; right: 1.25rem;
+  background: none; border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+.quote-modal-close:hover {
+  background: var(--bg-body);
+  color: var(--accent);
+}
+.quote-modal-header {
+  text-align: center;
+}
+.quote-modal-header h3 {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+.quote-modal-form .form-group {
+  margin-bottom: 1.25rem;
+}
+
+/* --- QUOTE MODAL LIGHT MODE OVERRIDES --- */
+[data-theme="light"] .quote-modal-card .form-input {
+  background-color: #FFFFFF !important;
+  border-color: var(--border-color) !important;
+  color: var(--text-primary) !important;
+}
+[data-theme="light"] .quote-modal-card .form-input:focus {
+  border-color: var(--accent) !important;
+  box-shadow: 0 0 0 3px rgba(242,140,40,0.1) !important;
+}
+[data-theme="light"] .quote-modal-card .form-label {
+  color: var(--text-primary) !important;
+}
+
+/* ==========================================================================
+   TABLET CENTERING OVERRIDES (SPLIT SECTIONS)
+   ========================================================================== */
+@media (max-width: 1024px) {
+  /* Center tag and buttons in generic split grid sections */
+  div[style*="display:grid"] > div > .tech-badge,
+  div[style*="display: grid"] > div > .tech-badge {
+    display: flex !important;
+    width: max-content;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  
+  div[style*="display:grid"] > div > a.btn,
+  div[style*="display: grid"] > div > a.btn,
+  div[style*="display:grid"] > div > div[style*="text-align: left"] > a.btn,
+  div[style*="display: grid"] > div > div[style*="text-align: left"] > a.btn {
+    display: flex !important;
+    width: max-content;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  
+  div[style*="display:grid"] > div > div[style*="text-align: left"],
+  div[style*="display: grid"] > div > div[style*="text-align: left"] {
+    text-align: center !important;
+    width: 100%;
+  }
+
+  .about-stats-grid {
+    text-align: center;
+  }
+}

@@ -87,6 +87,19 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  const drawerDropdownWraps = document.querySelectorAll('.drawer-dropdown-wrap');
+  drawerDropdownWraps.forEach(wrap => {
+    const trigger = wrap.querySelector('a.drawer-nav-link');
+    if (trigger) {
+      trigger.addEventListener('click', (e) => {
+        if (trigger.getAttribute('href') === 'javascript:void(0)') {
+          e.preventDefault();
+          wrap.classList.toggle('open');
+        }
+      });
+    }
+  });
+
   /* --------------------------------------------------------------------------
      4. INTERACTIVE EQUIPMENT SELECTOR ("BUILT AROUND YOUR OPERATION")
      -------------------------------------------------------------------------- */
@@ -154,6 +167,16 @@ document.addEventListener('DOMContentLoaded', () => {
       btn.addEventListener('click', () => {
         const group = btn.dataset.group;
         const val = btn.dataset.val;
+
+        if (!group) {
+          // Just handle UI active state toggle for standalone pill buttons (e.g. B2B calculator)
+          const container = btn.closest('.pill-options');
+          if (container) {
+            container.querySelectorAll('.pill-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+          }
+          return;
+        }
 
         // Reset active state in same group
         selectorWrap.querySelectorAll(`.pill-btn[data-group="${group}"]`).forEach(b => b.classList.remove('active'));
