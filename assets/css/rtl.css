@@ -93,3 +93,11 @@
   border-right: none;
   border-left: 1px solid var(--border-color);
 }
+
+/* Hamburger button RTL fix — tablet (768px–1024px) */
+@media (max-width: 1024px) {
+  [dir="rtl"] .hamburger-btn {
+    margin-left: 0 !important;
+    margin-right: auto !important;
+  }
+}

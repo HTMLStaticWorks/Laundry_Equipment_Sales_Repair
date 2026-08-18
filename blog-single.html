@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" data-theme="light" dir="ltr">
 <head>
   <meta charset="UTF-8">
@@ -194,9 +194,14 @@
   </section>
 
   <!-- FOOTER -->
+
+  <!-- ==========================================================================
+       SITE FOOTER (Identical across pages)
+       ========================================================================== -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
+        <!-- Col 1: Brand -->
         <div>
           <div class="brand-logo" style="color:#FFFFFF; margin-bottom:1rem;">
             <div class="brand-logo-icon">
@@ -212,7 +217,9 @@
 </div>
             <div class="brand-logo-text">INDUSTRIAL<span>LAUNDRY</span></div>
           </div>
-          <p style="font-size:0.85rem; color:#A0B2BA; margin-bottom:1.5rem;">Leader in heavy-duty commercial laundry machinery sales, turnkey installation, preventative maintenance, and 24/7 technical repair.</p>
+          <p style="font-size:0.85rem; color:#A0B2BA; margin-bottom:1.5rem;">
+            Leader in heavy-duty commercial laundry machinery sales, turnkey installation, preventative maintenance, and 24/7 technical repair.
+          </p>
                     <div style="display:flex; gap:0.75rem; margin-top:1.5rem; margin-bottom:1.5rem; align-items:center;">
             <a href="#" class="footer-social-icon">
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
@@ -227,42 +234,63 @@
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
             </a>
           </div>
+          <div class="tech-badge tech-badge-accent">
+            <span class="status-indicator"></span> DISPATCH ACTIVE: 24/7 SUPPORT
+          </div>
         </div>
+
+        <!-- Col 2: Equipment -->
         <div>
           <h4 class="footer-col-title">EQUIPMENT</h4>
           <div class="footer-links">
             <a href="products.html" class="footer-link">Commercial Washers</a>
             <a href="products.html" class="footer-link">Industrial Dryers</a>
-            <a href="products.html" class="footer-link">Ironing & Finishing</a>
+            <a href="products.html" class="footer-link">Ironing &amp; Finishing</a>
+            <a href="products.html" class="footer-link">Barrier Washers</a>
+            <a href="products.html" class="footer-link">OEM Spare Parts</a>
           </div>
         </div>
+
+        <!-- Col 3: Services -->
         <div>
           <h4 class="footer-col-title">SERVICES</h4>
           <div class="footer-links">
             <a href="services.html" class="footer-link">Turnkey Installation</a>
             <a href="services.html" class="footer-link">Preventative Maintenance</a>
             <a href="services.html" class="footer-link">Washer Diagnostics</a>
+            <a href="services.html" class="footer-link">Dryer System Repair</a>
+            <a href="services.html" class="footer-link">Emergency Assistance</a>
           </div>
         </div>
+
+        <!-- Col 4: Company -->
         <div>
           <h4 class="footer-col-title">COMPANY</h4>
           <div class="footer-links">
             <a href="about.html" class="footer-link">About Engineering</a>
             <a href="comparison.html" class="footer-link">Brand Comparison</a>
+            <a href="blog.html" class="footer-link">Knowledge Center</a>
             <a href="contact.html" class="footer-link">B2B Enquiry</a>
+            <a href="login.html" class="footer-link">Portal Login</a>
           </div>
         </div>
+
+        <!-- Col 5: Newsletter -->
         <div>
           <h4 class="footer-col-title">TECH BULLETIN</h4>
-          <form onsubmit="event.preventDefault(); alert('Subscribed');">
+          <p style="font-size:0.85rem; color:#A0B2BA; margin-bottom:1rem;">Subscribe for maintenance protocols and equipment efficiency guides.</p>
+          <form onsubmit="event.preventDefault(); alert('Subscribed to Technical Bulletin');">
             <input type="email" placeholder="Enter company email..." required class="form-input" style="margin-bottom:0.75rem; font-size:0.85rem;">
             <button type="submit" class="btn btn-primary" style="width:100%; font-size:0.8rem; padding:0.6rem 1rem;">Subscribe</button>
           </form>
         </div>
       </div>
+
       <div class="footer-bottom">
-        <div>Â© 2026 Laundry Equipment Sales & Repair. All Rights Reserved.</div>
-        <button class="back-to-top"><i data-lucide="arrow-up"></i></button>
+        <div>&copy; 2026 Laundry Equipment Sales &amp; Repair. All Rights Reserved.</div>
+        <button class="back-to-top" aria-label="Back to Top">
+          <i data-lucide="arrow-up"></i>
+        </button>
       </div>
     </div>
   </footer>
