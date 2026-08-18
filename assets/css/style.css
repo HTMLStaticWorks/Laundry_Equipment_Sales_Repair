@@ -586,11 +586,23 @@ button {
 }
 
 .drawer-header {
-  padding: 1.5rem 2rem;
+  padding: 1.25rem 1.25rem;
   border-bottom: 1px solid var(--border-tech);
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.drawer-header .brand-logo {
+  flex-shrink: 1;
+  min-width: 0;
+  font-size: clamp(0.75rem, 4.5vw, 1.15rem) !important;
+}
+
+.drawer-header .brand-logo-text {
+  white-space: nowrap;
+  line-height: 1.2;
 }
 
 .drawer-title {
@@ -1030,11 +1042,13 @@ button {
 }
 
 .rec-model {
+  display: block;
   font-family: var(--font-heading);
   font-size: 0.85rem;
   color: var(--accent);
   letter-spacing: 0.08em;
   margin-bottom: 1.25rem;
+  padding-right: 7.5rem;
 }
 
 .rec-specs-grid {
@@ -1927,6 +1941,10 @@ button {
   }
   .spotlight-info {
     padding: 2rem 1.5rem;
+    text-align: center;
+  }
+  .spotlight-info .flex {
+    justify-content: center;
   }
   .spotlight-media {
     min-height: 320px;
