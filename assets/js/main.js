@@ -316,6 +316,14 @@ document.addEventListener('DOMContentLoaded', () => {
      -------------------------------------------------------------------------- */
   const backToTopBtn = document.querySelector('.back-to-top');
   if (backToTopBtn) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTopBtn.classList.add('visible');
+      } else {
+        backToTopBtn.classList.remove('visible');
+      }
+    });
+
     backToTopBtn.addEventListener('click', (e) => {
       e.preventDefault();
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -439,7 +447,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Then check dropdown links
-    const dropdownLinks = document.querySelectorAll('.dropdown-menu a');
+    const dropdownLinks = document.querySelectorAll('.nav-dropdown-menu a');
     dropdownLinks.forEach(link => {
       const linkPath = link.getAttribute('href');
       if (linkPath === currentPath) {
